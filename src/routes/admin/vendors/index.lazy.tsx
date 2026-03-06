@@ -276,8 +276,8 @@ function RouteComponent() {
             {(hasPrevPage || hasNextPage) && (
                 <div className="flex items-center justify-center gap-4 pt-4">
                     <Link
-                        from="/admin/vendors/"
-                        search={(prev: any) => ({
+                        from="/admin/vendors"
+                        search={(prev) => ({
                             ...prev,
                             page: Math.max(1, page - 1),
                         })}
@@ -299,8 +299,8 @@ function RouteComponent() {
                     </div>
 
                     <Link
-                        from="/admin/vendors/"
-                        search={(prev: any) => ({
+                        from="/admin/vendors"
+                        search={(prev) => ({
                             ...prev,
                             page: page + 1,
                         })}
