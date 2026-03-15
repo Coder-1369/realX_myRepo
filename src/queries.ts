@@ -2,15 +2,23 @@ import { queryOptions } from '@tanstack/react-query'
 import { db } from '@/firebase/config'
 import { doc, getDoc, query, collection, where, getDocs, Timestamp } from 'firebase/firestore'
 
+export interface AccountManager {
+    name: string
+    phone: string
+    email: string
+}
+
 export interface Vendor {
     id: string
     name: string
+    email?: string
     status: 'Active' | 'Inactive'
     contact: string
     pin: string
     profilePicture?: string
     xcard?: boolean
     loyalty?: number[]
+    accountManager?: AccountManager
 }
 
 export interface Offer {
